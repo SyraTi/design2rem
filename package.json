@@ -1,0 +1,16 @@
+{
+  "name": "design2rem",
+  "version": "0.0.7",
+  "description": "A responsive script of dynamic rem (font-size of <html>) depends on design size.",
+  "main": "design2rem.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "files": [
+    "src"
+  ],
+  "dependencies": {
+  }
+}

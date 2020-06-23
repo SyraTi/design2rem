@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    屏幕宽：
+    <input type="range" oninput="widthChange(this)" value="750" min="0" max="1500">
+    屏幕高
+    <input type="range" oninput="heightChange(this)" value="1334" min="0" max="2600">
+    类型
+    <select onchange="changeMode(this)">
+        <option value="both">both</option>
+        <option value="Honly">Honly</option>
+        <option value="Wonly">Wonly</option>
+    </select>
+</div>
+<div class="screens">
+    <iframe src="./frame.html" id="screen" style="width: 750px;height: 1334px"></iframe>
+</div>
+<script>
+    var heightChange = function (target) {
+        document.getElementById('screen').style.height = target.value + 'px'
+
+    }
+    var widthChange = function (target) {
+        document.getElementById('screen').style.width = target.value + 'px'
+
+    }
+    var changeMode = function(target){
+        document.getElementById('screen').contentWindow.changeMode(target.value)
+
+    }
+</script>
+</body>
+</html>
