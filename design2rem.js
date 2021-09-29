@@ -68,10 +68,10 @@
                     scaleW = winW / this.simulateW
                     scaleH = winH / this.simulateH
                     switch (this.simulateMode) {
-                        case 'Honly':
+                        case 'height':
                             scale = scaleH
                             break
-                        case 'Wonly':
+                        case 'width':
                             scale = scaleW
                             break
                         case 'both':
@@ -87,10 +87,10 @@
                     scaleH = winH / this.designH
 
                     switch (this.mode) {
-                        case 'Honly':
+                        case 'height':
                             scale = scaleH
                             break
-                        case 'Wonly':
+                        case 'width':
                             scale = scaleW
                             break
                         case 'both':
